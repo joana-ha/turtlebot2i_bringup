@@ -1,5 +1,9 @@
 # Introduction
 
+This repository contains an adaptation of the turtlebot2i_bringup package in https://github.com/Interbotix/turtlebot2i.
+
+It provides the turtlebot2i_bringup ROS package with a collection of launch files usable with the lfe_navigation and ros_astra_camera packages in https://github.com/joana-ha/lfe_navigation_motion_cues.git and https://github.com/joana-ha/ros_astra_sdk_wrapper.git. All other ROS packages in this repository are unchanged and retrieved from https://github.com/Interbotix/turtlebot2i.
+
 ![Alt text](https://www.trossenrobotics.com/Shared/images/PImages/turtlebot2i/step4-3.jpg "Turtlebot2i")
 
 ## Definition
