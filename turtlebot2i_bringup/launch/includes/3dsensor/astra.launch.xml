@@ -10,19 +10,20 @@
 
   <!-- Processing Modules -->
   <arg name="rgb_processing"                  default="true"/>
-  <arg name="ir_processing"                   default="true"/>
+  <arg name="ir_processing"                   default="false"/>
   <arg name="depth_processing"                default="true"/>
   <arg name="depth_registered_processing"     default="true"/>
-  <arg name="disparity_processing"            default="true"/>
-  <arg name="disparity_registered_processing" default="true"/>
+  <arg name="disparity_processing"            default="false"/>
+  <arg name="disparity_registered_processing" default="false"/>
   <arg name="scan_processing"                 default="true"/>
 
   <!-- Worker threads for the nodelet manager -->
   <arg name="num_worker_threads" default="4" />
 
-  <include file="$(find astra_launch)/launch/astra.launch">
+    <include file="$(find ros_astra_sdk_wrapper)/launch/ros_astra_sdk_wrapper.launch"> 
+    <!-- <include file="$(find astra_launch)/launch/astra.launch">  -->
     <arg name="camera"                          value="$(arg camera)"/>
-    <arg name="publish_tf"                      value="$(arg publish_tf)"/>
+    <arg name="publish_tf"                      value="$(arg publish_tf)"/> 
     <arg name="depth_registration"              value="$(arg depth_registration)"/>
     <arg name="num_worker_threads"              value="$(arg num_worker_threads)" />
 
